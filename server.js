@@ -21,12 +21,13 @@ try {
   console.error('Unable to connect to the database:', error);
 }
 
-
+// default route
 app.get('/', (req, res) => res.send("Index path"));
 
+// gigs route path
 app.use('/gigs', require('./routes/gigs.routes'));
 
 
-
+// port connection
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
