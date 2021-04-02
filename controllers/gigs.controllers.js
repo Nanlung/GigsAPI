@@ -1,6 +1,7 @@
 
 const Gig = require('../models/gigs.model.js');
 
+// create new Gig controller
 exports.create = (req, res) => {
   const gig =  {
     title: req.body.title,
